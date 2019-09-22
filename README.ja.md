@@ -14,12 +14,7 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**
 
-- [Usage](#usage)
-  - [Logger](#logger)
-  - [Command](#command)
-  - [ApiHelper](#apihelper)
-  - [Utils](#utils)
-  - [Test](#test)
+- [使用方法](#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95)
 - [Author](#author)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->

@@ -15,11 +15,6 @@ Helper for GitHub Action to get config from the repository where the action is r
 **Table of Contents**
 
 - [Usage](#usage)
-  - [Logger](#logger)
-  - [Command](#command)
-  - [ApiHelper](#apihelper)
-  - [Utils](#utils)
-  - [Test](#test)
 - [Author](#author)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
