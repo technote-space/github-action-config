@@ -42,7 +42,6 @@
     "access": "public"
   },
   "scripts": {
-    "setup": "bash bin/setup.sh && rm -rdf bin",
     "build": "tsc",
     "test": "yarn lint && yarn cover",
     "lint": "eslint src/**/**/*.ts && eslint __tests__/**/**/*.ts",
