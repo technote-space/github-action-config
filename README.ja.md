@@ -8,7 +8,7 @@
 
 *Read this in other languages: [English](README.md), [日本語](README.ja.md).*
 
-Helper for GitHub Action to get config from the repository where the action is running.
+アクション実行中のリポジトリから設定を取得する GitHub Action のヘルパー
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
@@ -24,8 +24,8 @@ Helper for GitHub Action to get config from the repository where the action is r
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-## Usage
-1. Install  
+## 使用方法
+1. インストール  
 `npm i @technote-space/github-action-config-helper`
 1. 
 ```js
