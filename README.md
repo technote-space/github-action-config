@@ -1,12 +1,12 @@
-# TypeScript Package Template
+# GitHub Action Config Helper
 
-[![npm version](https://badge.fury.io/js/%40technote-space%2Fts-package-template.svg)](https://badge.fury.io/js/%40technote-space%2Fts-package-template)
-[![Build Status](https://github.com/technote-space/ts-package-template/workflows/Build/badge.svg)](https://github.com/technote-space/ts-package-template/actions)
-[![Coverage Status](https://coveralls.io/repos/github/technote-space/ts-package-template/badge.svg?branch=master)](https://coveralls.io/github/technote-space/ts-package-template?branch=master)
-[![CodeFactor](https://www.codefactor.io/repository/github/technote-space/ts-package-template/badge)](https://www.codefactor.io/repository/github/technote-space/ts-package-template)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/technote-space/ts-package-template/blob/master/LICENSE)
+[![npm version](https://badge.fury.io/js/%40technote-space%2Fgithub-action-config-helper.svg)](https://badge.fury.io/js/%40technote-space%2Fgithub-action-config-helper)
+[![Build Status](https://github.com/technote-space/github-action-config-helper/workflows/Build/badge.svg)](https://github.com/technote-space/github-action-config-helper/actions)
+[![Coverage Status](https://coveralls.io/repos/github/technote-space/github-action-config-helper/badge.svg?branch=master)](https://coveralls.io/github/technote-space/github-action-config-helper?branch=master)
+[![CodeFactor](https://www.codefactor.io/repository/github/technote-space/github-action-config-helper/badge)](https://www.codefactor.io/repository/github/technote-space/github-action-config-helper)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/technote-space/github-action-config-helper/blob/master/LICENSE)
 
-Template for npm package.
+Helper for GitHub Action to get config from the repository where the action is running.
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->

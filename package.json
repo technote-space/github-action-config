@@ -1,20 +1,20 @@
 {
-  "name": "@technote-space/ts-package-template",
+  "name": "@technote-space/github-action-config-helper",
   "version": "0.0.1",
-  "description": "Template for npm package.",
+  "description": "Helper for GitHub Action to manage config.",
   "author": "Technote <technote.space@gmail.com> (https://technote.space)",
   "license": "MIT",
   "keywords": [
     "github",
     "github actions"
   ],
-  "homepage": "https://github.com/technote-space/ts-package-template",
+  "homepage": "https://github.com/technote-space/github-action-config-helper",
   "repository": {
     "type": "git",
-    "url": "https://github.com/technote-space/ts-package-template.git"
+    "url": "https://github.com/technote-space/github-action-config-helper.git"
   },
   "bugs": {
-    "url": "https://github.com/technote-space/ts-package-template/issues"
+    "url": "https://github.com/technote-space/github-action-config-helper/issues"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
