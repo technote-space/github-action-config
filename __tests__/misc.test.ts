@@ -14,7 +14,7 @@ describe('parseConfig', () => {
 
 	it('should throw error', () => {
 		expect(() => {
-			expect(parseConfig(encodeContent('Test1\nTest2: Test3'))).toEqual(false);
+			parseConfig(encodeContent('Test1\nTest2: Test3'));
 		}).toThrow();
 	});
 });

@@ -2,6 +2,7 @@ import path from 'path';
 import { GitHub } from '@actions/github/lib/github';
 import { Context } from '@actions/github/lib/context';
 import { parseConfig } from './misc';
+import { NOT_FOUND_STATUS } from './constant';
 
 export const getConfig = async(fileName: string, octokit: GitHub, context: Context, configPath = '.github'): Promise<object | false> => {
 	try {
@@ -12,8 +13,7 @@ export const getConfig = async(fileName: string, octokit: GitHub, context: Conte
 		});
 		return parseConfig(contents.data['content']);
 	} catch (error) {
-		// eslint-disable-next-line no-magic-numbers
-		if (error.status && 404 === error.status) {
+		if (error.status && NOT_FOUND_STATUS === error.status) {
 			return false;
 		}
 		throw error;
