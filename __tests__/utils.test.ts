@@ -20,6 +20,7 @@ describe('getConfig', () => {
 				repo: 'world',
 			},
 		}));
+
 		expect(config).toHaveProperty('Backlog');
 		expect(config['Backlog']).toHaveProperty('test1');
 		expect(typeof config['Backlog']['test1']).toBe('object');
