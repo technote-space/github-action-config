@@ -37,7 +37,7 @@ describe('getConfig', () => {
 				owner: 'hello',
 				repo: 'world',
 			},
-		}))).toBeFalsy();
+		}))).toBe(false);
 	});
 
 	it('should throw error', async() => {
