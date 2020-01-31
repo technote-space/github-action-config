@@ -7,7 +7,7 @@ import { getConfig } from '../src';
 
 describe('getConfig', () => {
 	disableNetConnect(nock);
-	const octokit = new GitHub('');
+	const octokit = new GitHub('test-token');
 
 	it('should get config', async() => {
 		nock('https://api.github.com')
