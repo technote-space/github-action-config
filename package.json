@@ -2,7 +2,11 @@
   "name": "@technote-space/github-action-config-helper",
   "version": "0.1.2",
   "description": "Helper for GitHub Action to manage config.",
-  "author": "Technote <technote.space@gmail.com> (https://technote.space)",
+  "author": {
+    "name": "Technote",
+    "email": "technote.space@gmail.com",
+    "url": "https://technote.space"
+  },
   "license": "MIT",
   "keywords": [
     "github",
@@ -44,7 +48,7 @@
   "scripts": {
     "build": "tsc",
     "test": "yarn lint && yarn cover",
-    "lint": "eslint 'src/**/*.ts' '__tests__/**/*.ts'",
+    "lint": "eslint 'src/**/*.ts' '__tests__/**/*.ts' --cache",
     "lint:fix": "eslint --fix 'src/**/*.ts' '__tests__/**/*.ts'",
     "cover": "jest --coverage",
     "update": "ncu -u && yarn install && yarn upgrade && yarn audit"
