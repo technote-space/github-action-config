@@ -1,13 +1,13 @@
 /* eslint-disable no-magic-numbers */
 import nock from 'nock';
 import path from 'path';
-import { GitHub } from '@actions/github' ;
+import { Octokit } from '@octokit/rest';
 import { disableNetConnect, getConfigFixture, getContext } from '@technote-space/github-action-test-helper';
 import { getConfig } from '../src';
 
 describe('getConfig', () => {
 	disableNetConnect(nock);
-	const octokit = new GitHub('test-token');
+	const octokit = new Octokit({auth: 'token test-token'});
 
 	it('should get config', async() => {
 		nock('https://api.github.com')
