@@ -1,6 +1,6 @@
 /* eslint-disable no-magic-numbers */
 import { encodeContent } from '@technote-space/github-action-test-helper';
-import { parseConfig } from '../src/misc';
+import { parseConfig } from '../src';
 
 describe('parseConfig', () => {
 	it('should parse config', async() => {
