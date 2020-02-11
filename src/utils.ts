@@ -4,7 +4,7 @@ import { Context } from '@actions/github/lib/context';
 import { parseConfig } from './misc';
 import { NOT_FOUND_STATUS } from './constant';
 
-export const getConfig = async(fileName: string, octokit: Octokit, context: Context, configPath = '.github'): Promise<object | false> => {
+export const getConfig = async(fileName: string, octokit: Octokit, context: Context, configPath = '.github'): Promise<object | false> | never => {
 	try {
 		return parseConfig((await octokit.repos.getContents({
 			owner: context.repo.owner,
