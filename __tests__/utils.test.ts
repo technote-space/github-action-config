@@ -31,7 +31,7 @@ describe('getConfig', () => {
 
 	it('should get config (specify ref)', async() => {
 		nock('https://api.github.com')
-			.get('/repos/hello/world/contents/.github/config.json?ref=feature%2Fchange')
+			.get('/repos/hello/world/contents/config.json?ref=feature%2Fchange')
 			.reply(200, getConfigFixture(fixturesDir, 'config.json'));
 
 		const config = await getConfig('config.json', octokit, getContext({
@@ -39,7 +39,7 @@ describe('getConfig', () => {
 				owner: 'hello',
 				repo: 'world',
 			},
-		}), {ref: 'feature/change'});
+		}), {ref: 'feature/change', configPath: ''});
 
 		expect(config).toHaveProperty('Backlog');
 		expect(config['Backlog']).toHaveProperty('test1');

@@ -1,4 +1,4 @@
-import path from 'path';
+import { join } from 'path';
 import { Octokit } from '@octokit/rest';
 import { Context } from '@actions/github/lib/context';
 import { parseConfig } from './misc';
@@ -10,7 +10,7 @@ export const getConfig = async(fileName: string, octokit: Octokit, context: Cont
 		const params: Octokit.ReposGetContentsParams = {
 			owner: context.repo.owner,
 			repo: context.repo.repo,
-			path: path.posix.join(configPath, fileName),
+			path: join(configPath, fileName),
 		};
 		if (ref) {
 			params.ref = ref;
