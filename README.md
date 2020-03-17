@@ -35,7 +35,22 @@ import { context, GitHub } from '@actions/github';
 ...
 
 const config = await getConfig('config.yml', new GitHub(getInput('GITHUB_TOKEN', {required: true})), context);
+//const config = await getConfig('config.json', new GitHub(getInput('GITHUB_TOKEN', {required: true})), context, {ref: 'feature/change'}); // branch
+//const config = await getConfig('config', new GitHub(getInput('GITHUB_TOKEN', {required: true})), context, {ref: 'v1.2.3'}); // tag
+//const config = await getConfig('config.yml', new GitHub(getInput('GITHUB_TOKEN', {required: true})), context, {configPath: ''}); // default: '.github'
 ```
+
+## Supported file types
+### YAML
+- `.yml`
+- `.yaml`
+
+### JSON
+Other extensions
+
+e.g. 
+- `config.json`
+- `.eslintrc`
 
 ## Author
 [GitHub (Technote)](https://github.com/technote-space)  
