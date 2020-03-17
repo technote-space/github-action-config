@@ -29,6 +29,24 @@ describe('getConfig', () => {
 		expect(typeof config['Backlog']['test2']).toBe('object');
 	});
 
+	it('should get config (specify ref)', async() => {
+		nock('https://api.github.com')
+			.get('/repos/hello/world/contents/.github/config.yml?ref=feature%2Fchange')
+			.reply(200, getConfigFixture(fixturesDir, 'config.yml'));
+
+		const config = await getConfig('config.yml', octokit, getContext({
+			repo: {
+				owner: 'hello',
+				repo: 'world',
+			},
+		}), {ref: 'feature/change'});
+
+		expect(config).toHaveProperty('Backlog');
+		expect(config['Backlog']).toHaveProperty('test1');
+		expect(typeof config['Backlog']['test1']).toBe('object');
+		expect(typeof config['Backlog']['test2']).toBe('object');
+	});
+
 	it('should not get config', async() => {
 		nock('https://api.github.com')
 			.get('/repos/hello/world/contents/.github/config.yml')
@@ -52,6 +70,6 @@ describe('getConfig', () => {
 				owner: 'hello',
 				repo: 'world',
 			},
-		}), '.test')).rejects.toThrow();
+		}), {configPath: '.test'})).rejects.toThrow();
 	});
 });
