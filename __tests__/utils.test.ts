@@ -31,10 +31,10 @@ describe('getConfig', () => {
 
 	it('should get config (specify ref)', async() => {
 		nock('https://api.github.com')
-			.get('/repos/hello/world/contents/.github/config.yml?ref=feature%2Fchange')
-			.reply(200, getConfigFixture(fixturesDir, 'config.yml'));
+			.get('/repos/hello/world/contents/.github/config.json?ref=feature%2Fchange')
+			.reply(200, getConfigFixture(fixturesDir, 'config.json'));
 
-		const config = await getConfig('config.yml', octokit, getContext({
+		const config = await getConfig('config.json', octokit, getContext({
 			repo: {
 				owner: 'hello',
 				repo: 'world',
@@ -63,7 +63,7 @@ describe('getConfig', () => {
 	it('should throw error', async() => {
 		nock('https://api.github.com')
 			.get('/repos/hello/world/contents/.test/config.yml')
-			.reply(200, getConfigFixture(fixturesDir, 'error.yml'));
+			.reply(500);
 
 		await expect(getConfig('config.yml', octokit, getContext({
 			repo: {
