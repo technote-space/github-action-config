@@ -18,6 +18,9 @@ Helper for GitHub Actions to get config from the repository where the action is 
 <summary>Details</summary>
 
 - [Usage](#usage)
+- [Supported file types](#supported-file-types)
+  - [YAML](#yaml)
+  - [JSON](#json)
 - [Author](#author)
 
 </details>
