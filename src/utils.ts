@@ -22,6 +22,7 @@ export const getConfig = async(fileName: string, octokit: Octokit, context: Cont
     if (ref) {
       params.ref = ref;
     }
+
     return parseConfig((await (octokit as RestEndpointMethods).repos.getContent(params)).data['content']);
   } catch (error) {
     if (error.status && NOT_FOUND_STATUS === error.status) {
