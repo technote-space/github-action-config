@@ -36,11 +36,11 @@
   "dependencies": {
     "@actions/github": "^4.0.0",
     "@octokit/plugin-rest-endpoint-methods": "^4.2.0",
-    "@technote-space/github-action-helper": "^4.0.4",
+    "@technote-space/github-action-helper": "^4.0.5",
     "js-yaml": "^3.14.0"
   },
   "devDependencies": {
-    "@technote-space/github-action-test-helper": "^0.6.1",
+    "@technote-space/github-action-test-helper": "^0.6.2",
     "@types/jest": "^26.0.15",
     "@types/node": "^14.14.6",
     "@typescript-eslint/eslint-plugin": "^4.6.0",
