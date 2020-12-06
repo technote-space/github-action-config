@@ -6,7 +6,7 @@ export const isYaml = (filename: string): boolean => ['yaml', 'yml'].includes(St
 export const parseYamlConfig = (content: string): { [key: string]: any } => {
   try {
     const config = yaml.safeLoad(content);
-    if (!config || !Object.keys(config).length) {
+    if (!config || typeof config === 'string' || !Object.keys(config).length) {
       return {};
     }
 
