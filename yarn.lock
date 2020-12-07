@@ -627,10 +627,10 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@technote-space/github-action-helper@^4.4.2":
-  version "4.4.2"
-  resolved "https://registry.yarnpkg.com/@technote-space/github-action-helper/-/github-action-helper-4.4.2.tgz#e88ecbcacc38f460e10a9184d9e927f258146881"
-  integrity sha512-V2xZwuNwLkizK2Pbj3g2Y5b8X16+9JfEoWbJaT7B48l7CB8mh1qEg5uoqK0X4bx2nIe4/2CtumlA1SA2U1P64Q==
+"@technote-space/github-action-helper@^4.4.4":
+  version "4.4.4"
+  resolved "https://registry.yarnpkg.com/@technote-space/github-action-helper/-/github-action-helper-4.4.4.tgz#09acc6e4439523d2503adb115d8665e627a2aa44"
+  integrity sha512-3sy/b+V2GBKVxttEgjVQO+ZL2c0+UsVI10QMdMMR7evyF/wTXv6Pzarh2sHKqiKtnnzjXvfIT8ztfFR0vke7xQ==
   dependencies:
     "@actions/core" "^1.2.6"
     "@actions/github" "^4.0.0"
