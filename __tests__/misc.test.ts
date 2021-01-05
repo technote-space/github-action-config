@@ -37,12 +37,13 @@ describe('parseYamlConfig', () => {
         reason: 'end of the stream or a document separator is expected',
         mark: {
           name: null,
-          buffer: 'Test1\nTest2: Test3\n\u0000',
+          buffer: 'Test1\nTest2: Test3\n',
           position: 11,
           line: 1,
           column: 5,
+          snippet: ' 1 | Test1\n 2 | Test2: Test3\n----------^',
         },
-        message: 'end of the stream or a document separator is expected at line 2, column 6:\n    Test2: Test3\n         ^',
+        message: 'end of the stream or a document separator is expected (2:6)\n\n 1 | Test1\n 2 | Test2: Test3\n----------^',
       }, '__error__'),
     ]);
   });
