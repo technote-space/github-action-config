@@ -1,11 +1,11 @@
-import yaml from 'js-yaml';
+import {load} from 'js-yaml';
 
 export const isYaml = (filename: string): boolean => ['yaml', 'yml'].includes(String(filename.split('.').pop()));
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const parseYamlConfig = (content: string): { [key: string]: any } => {
   try {
-    const config = yaml.safeLoad(content);
+    const config = load(content);
     if (!config || typeof config === 'string' || !Object.keys(config).length) {
       return {};
     }
