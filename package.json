@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "@actions/github": "^4.0.0",
-    "@octokit/plugin-rest-endpoint-methods": "^4.8.2",
+    "@octokit/plugin-rest-endpoint-methods": "^4.9.0",
     "@technote-space/github-action-helper": "^4.4.9",
     "js-yaml": "^4.0.0"
   },
