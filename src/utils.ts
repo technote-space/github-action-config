@@ -1,7 +1,6 @@
 import {join} from 'path';
 import {Context} from '@actions/github/lib/context';
 import {Octokit} from '@technote-space/github-action-helper/dist/types';
-import {RestEndpointMethods} from '@octokit/plugin-rest-endpoint-methods/dist-types/generated/method-types';
 import {parseConfig} from './misc';
 import {NOT_FOUND_STATUS} from './constant';
 
@@ -23,7 +22,7 @@ export const getConfig = async(fileName: string, octokit: Octokit, context: Cont
       params.ref = ref;
     }
 
-    return parseConfig((await (octokit as RestEndpointMethods).repos.getContent(params)).data['content']);
+    return parseConfig((await octokit.repos.getContent(params)).data['content']);
   } catch (error) {
     if (error.status && NOT_FOUND_STATUS === error.status) {
       return false;
