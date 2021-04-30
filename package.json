@@ -35,12 +35,12 @@
   },
   "dependencies": {
     "@actions/github": "^4.0.0",
-    "@octokit/plugin-rest-endpoint-methods": "^5.1.0",
+    "@octokit/plugin-rest-endpoint-methods": "^5.1.1",
     "@technote-space/github-action-helper": "^5.2.6",
     "js-yaml": "^4.1.0"
   },
   "devDependencies": {
-    "@technote-space/github-action-test-helper": "^0.7.8",
+    "@technote-space/github-action-test-helper": "^0.7.9",
     "@types/jest": "^26.0.23",
     "@types/js-yaml": "^4.0.1",
     "@types/node": "^15.0.1",
