@@ -22,7 +22,7 @@ export const getConfig = async(fileName: string, octokit: Octokit, context: Cont
       params.ref = ref;
     }
 
-    return parseConfig((await octokit.repos.getContent(params)).data['content']);
+    return parseConfig((await octokit.rest.repos.getContent(params)).data['content']);
   } catch (error) {
     if (error.status && NOT_FOUND_STATUS === error.status) {
       return false;
