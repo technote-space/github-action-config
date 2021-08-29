@@ -5,7 +5,7 @@ export const isYaml = (filename: string): boolean => ['yaml', 'yml'].includes(St
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const parseYamlConfig = (content: string): { [key: string]: any } => {
   try {
-    const config = load(content);
+    const config = load(content) as never;
     if (!config || typeof config !== 'object') {
       return {};
     }

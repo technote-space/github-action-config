@@ -23,7 +23,7 @@ export const getConfig = async(fileName: string, octokit: Octokit, context: Cont
     }
 
     return parseConfig((await octokit.rest.repos.getContent(params)).data['content']);
-  } catch (error) {
+  } catch (error: any) { // eslint-disable-line @typescript-eslint/no-explicit-any
     if (error.status && NOT_FOUND_STATUS === error.status) {
       return false;
     }
