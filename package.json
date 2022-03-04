@@ -40,7 +40,7 @@
     "js-yaml": "^4.1.0"
   },
   "devDependencies": {
-    "@technote-space/github-action-test-helper": "^0.7.38",
+    "@technote-space/github-action-test-helper": "^0.7.39",
     "@types/jest": "^27.4.1",
     "@types/js-yaml": "^4.0.5",
     "@types/node": "^17.0.21",
