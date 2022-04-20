@@ -1,8 +1,9 @@
 /* eslint-disable no-magic-numbers */
+import { describe, expect, it } from 'vitest';
 import nock from 'nock';
-import {resolve} from 'path';
-import {disableNetConnect, getConfigFixture, getContext, getOctokit} from '@technote-space/github-action-test-helper';
-import {getConfig} from '../src';
+import { resolve } from 'path';
+import { disableNetConnect, getConfigFixture, getContext, getOctokit } from '@technote-space/github-action-test-helper';
+import { getConfig } from './utils';
 
 const fixturesDir = resolve(__dirname, 'fixtures');
 
@@ -38,7 +39,7 @@ describe('getConfig', () => {
         owner: 'hello',
         repo: 'world',
       },
-    }), {ref: 'feature/change', configPath: ''});
+    }), { ref: 'feature/change', configPath: '' });
 
     expect(config).toHaveProperty('Backlog');
     expect(config['Backlog']).toHaveProperty('test1');
@@ -69,6 +70,6 @@ describe('getConfig', () => {
         owner: 'hello',
         repo: 'world',
       },
-    }), {configPath: '.test'})).rejects.toThrow();
+    }), { configPath: '.test' })).rejects.toThrow();
   });
 });

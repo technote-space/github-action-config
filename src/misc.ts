@@ -1,4 +1,4 @@
-import {load} from 'js-yaml';
+import { load } from 'js-yaml';
 
 export const isYaml = (filename: string): boolean => ['yaml', 'yml'].includes(String(filename.split('.').pop()));
 
