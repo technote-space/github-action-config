@@ -1,6 +1,6 @@
 /* eslint-disable no-magic-numbers */
-import { describe, expect, it } from 'vitest';
 import { encodeContent, spyOnStdout, stdoutCalledWith, getLogStdout } from '@technote-space/github-action-test-helper';
+import { describe, expect, it } from 'vitest';
 import { parseConfig } from '../src';
 import { isYaml, parseYamlConfig, parseJsonConfig } from './misc';
 

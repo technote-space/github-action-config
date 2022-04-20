@@ -1,8 +1,8 @@
 /* eslint-disable no-magic-numbers */
-import { describe, expect, it } from 'vitest';
-import nock from 'nock';
 import { resolve } from 'path';
 import { disableNetConnect, getConfigFixture, getContext, getOctokit } from '@technote-space/github-action-test-helper';
+import nock from 'nock';
+import { describe, expect, it } from 'vitest';
 import { getConfig } from './utils';
 
 const fixturesDir = resolve(__dirname, 'fixtures');
