@@ -1,7 +1,8 @@
 /* eslint-disable no-magic-numbers */
-import {encodeContent, spyOnStdout, stdoutCalledWith, getLogStdout} from '@technote-space/github-action-test-helper';
-import {parseConfig} from '../src';
-import {isYaml, parseYamlConfig, parseJsonConfig} from '../src/misc';
+import { encodeContent, spyOnStdout, stdoutCalledWith, getLogStdout } from '@technote-space/github-action-test-helper';
+import { describe, expect, it } from 'vitest';
+import { parseConfig } from '../src';
+import { isYaml, parseYamlConfig, parseJsonConfig } from './misc';
 
 describe('isYaml', () => {
   it('should return true', () => {
@@ -20,8 +21,8 @@ describe('isYaml', () => {
 
 describe('parseYamlConfig', () => {
   it('should parse config', async() => {
-    expect(parseYamlConfig('a: b')).toEqual({a: 'b'});
-    expect(parseYamlConfig('a:\n  - b\n  - c')).toEqual({a: ['b', 'c']});
+    expect(parseYamlConfig('a: b')).toEqual({ a: 'b' });
+    expect(parseYamlConfig('a:\n  - b\n  - c')).toEqual({ a: ['b', 'c'] });
   });
 
   it('should return empty if empty', () => {
@@ -51,8 +52,8 @@ describe('parseYamlConfig', () => {
 
 describe('parseJsonConfig', () => {
   it('should parse config', async() => {
-    expect(parseJsonConfig('{"a": "b"}')).toEqual({a: 'b'});
-    expect(parseJsonConfig('{"a": ["b", "c"]}')).toEqual({a: ['b', 'c']});
+    expect(parseJsonConfig('{"a": "b"}')).toEqual({ a: 'b' });
+    expect(parseJsonConfig('{"a": ["b", "c"]}')).toEqual({ a: ['b', 'c'] });
   });
 
   it('should return empty if error', () => {
@@ -68,12 +69,12 @@ describe('parseJsonConfig', () => {
 
 describe('parseConfig', () => {
   it('should parse yaml', async() => {
-    expect(parseConfig(encodeContent('a: b'))).toEqual({a: 'b'});
-    expect(parseConfig(encodeContent('a: b'), 'test.yaml')).toEqual({a: 'b'});
+    expect(parseConfig(encodeContent('a: b'))).toEqual({ a: 'b' });
+    expect(parseConfig(encodeContent('a: b'), 'test.yaml')).toEqual({ a: 'b' });
   });
 
   it('should parse json', () => {
-    expect(parseConfig(encodeContent('{"a": "b"}'), 'test.json')).toEqual({a: 'b'});
-    expect(parseConfig(encodeContent('{"a": "b"}'), '.eslintrc')).toEqual({a: 'b'});
+    expect(parseConfig(encodeContent('{"a": "b"}'), 'test.json')).toEqual({ a: 'b' });
+    expect(parseConfig(encodeContent('{"a": "b"}'), '.eslintrc')).toEqual({ a: 'b' });
   });
 });
