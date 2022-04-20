@@ -1,6 +1,6 @@
+import type { Context } from '@actions/github/lib/context';
+import type { Octokit } from '@technote-space/github-action-helper/dist/types';
 import { join } from 'path';
-import { Context } from '@actions/github/lib/context';
-import { Octokit } from '@technote-space/github-action-helper/dist/types';
 import { NOT_FOUND_STATUS } from './constant';
 import { parseConfig } from './misc';
 
