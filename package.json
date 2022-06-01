@@ -1,6 +1,6 @@
 {
   "name": "@technote-space/github-action-config-helper",
-  "version": "2.1.4",
+  "version": "2.1.5",
   "description": "Helper for GitHub Action to manage config.",
   "keywords": [
     "github",
@@ -31,7 +31,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsc && rm -f dist/*.js && rollup -c",
+    "build": "tsc --emitDeclarationOnly && rollup -c",
     "cover": "vitest run --coverage",
     "lint": "eslint 'src/**/*.ts' --cache",
     "lint:fix": "eslint --fix 'src/**/*.ts'",
@@ -42,7 +42,7 @@
   "dependencies": {
     "@actions/github": "^5.0.3",
     "@octokit/plugin-rest-endpoint-methods": "^5.13.0",
-    "@technote-space/github-action-helper": "^5.3.6",
+    "@technote-space/github-action-helper": "^5.3.7",
     "js-yaml": "^4.1.0"
   },
   "devDependencies": {
