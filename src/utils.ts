@@ -1,8 +1,8 @@
-import type { Context } from '@actions/github/lib/context';
-import type { Octokit } from '@technote-space/github-action-helper/dist/types';
+import type { Context } from '@actions/github/lib/context.js';
+import type { Octokit } from '@technote-space/github-action-helper';
 import { join } from 'path';
-import { NOT_FOUND_STATUS } from './constant';
-import { parseConfig } from './misc';
+import { NOT_FOUND_STATUS } from './constant.js';
+import { parseConfig } from './misc.js';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const getConfig = async(fileName: string, octokit: Octokit, context: Context, options: { configPath?: string; ref?: string } = {}): Promise<{ [key: string]: any } | false> | never => {

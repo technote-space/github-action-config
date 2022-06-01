@@ -1,8 +1,7 @@
 /* eslint-disable no-magic-numbers */
 import { encodeContent, spyOnStdout, stdoutCalledWith, getLogStdout } from '@technote-space/github-action-test-helper';
 import { describe, expect, it } from 'vitest';
-import { parseConfig } from '../src';
-import { isYaml, parseYamlConfig, parseJsonConfig } from './misc';
+import { isYaml, parseConfig, parseYamlConfig, parseJsonConfig } from './misc.js';
 
 describe('isYaml', () => {
   it('should return true', () => {
