@@ -1,2 +1,2 @@
-export { getConfig } from './utils';
-export { parseConfig } from './misc';
+export { getConfig } from './utils.js';
+export { parseConfig } from './misc.js';

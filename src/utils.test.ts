@@ -3,7 +3,7 @@ import { resolve } from 'path';
 import { disableNetConnect, getConfigFixture, getContext, getOctokit } from '@technote-space/github-action-test-helper';
 import nock from 'nock';
 import { describe, expect, it } from 'vitest';
-import { getConfig } from './utils';
+import { getConfig } from './utils.js';
 
 const fixturesDir = resolve(__dirname, 'fixtures');
 
