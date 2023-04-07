@@ -46,7 +46,7 @@
     "js-yaml": "^4.1.0"
   },
   "devDependencies": {
-    "@rollup/plugin-typescript": "^11.0.0",
+    "@rollup/plugin-typescript": "^11.1.0",
     "@sindresorhus/tsconfig": "^3.0.1",
     "@technote-space/github-action-test-helper": "^0.11.5",
     "@types/js-yaml": "^4.0.5",
