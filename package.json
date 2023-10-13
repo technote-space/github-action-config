@@ -40,8 +40,8 @@
     "update": "npm_config_yes=true npx npm-check-updates -u --timeout 100000 && yarn install && yarn upgrade && yarn audit"
   },
   "dependencies": {
-    "@actions/github": "^5.1.1",
-    "@octokit/plugin-rest-endpoint-methods": "^10.0.0",
+    "@actions/github": "^6.0.0",
+    "@octokit/plugin-rest-endpoint-methods": "^10.0.1",
     "@technote-space/github-action-helper": "^5.3.17",
     "js-yaml": "^4.1.0"
   },
@@ -49,14 +49,14 @@
     "@rollup/plugin-typescript": "^11.1.5",
     "@sindresorhus/tsconfig": "^5.0.0",
     "@technote-space/github-action-test-helper": "^0.11.17",
-    "@types/js-yaml": "^4.0.6",
-    "@types/node": "^20.8.4",
+    "@types/js-yaml": "^4.0.7",
+    "@types/node": "^20.8.5",
     "@typescript-eslint/eslint-plugin": "^6.7.5",
     "@typescript-eslint/parser": "^6.7.5",
     "@vitest/coverage-c8": "^0.33.0",
     "eslint": "^8.51.0",
     "eslint-plugin-import": "^2.28.1",
-    "nock": "^13.3.3",
+    "nock": "^13.3.4",
     "rollup": "^4.0.2",
     "typescript": "^5.2.2",
     "vitest": "^0.34.6"
